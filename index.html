@@ -6,6 +6,7 @@
    <title>Porfolio</title>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/jquery-ui.min.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -340,6 +341,59 @@
                </div>
             </div>
          </section>
+         <section class="section-tech">
+            <div class="tech">
+               <div class="tech-item html">
+                  <img class="tech-image" src="img/tech/html-black.svg" alt="HTML" title="Язык гипертекстовой разметки ">
+               </div>
+               <div class="tech-item css">
+                  <img class="tech-image" src="img/tech/css-black.svg" alt="CSS" title="Каскадные таблицы стилей">
+               </div>
+               <div class="tech-item js">
+                  <img class="tech-image" src="img/tech/JavaScript-black.svg" alt="JavaScript" title="Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам">
+               </div>
+               <div class="tech-item jquery">
+                  <img class="tech-image" src="img/tech/jquery-black.svg" alt="jQuery" title="Популярная библиотека JavaScript">
+               </div>
+               <div class="tech-item bootstrap">
+                  <img class="tech-image" src="img/tech/bootstrap-black.svg" alt="Bootstrap" title="Популярный CSS фреймворк">
+               </div>
+               <div class="tech-item php">
+                  <img class="tech-image" src="img/tech/php-black.svg" alt="PHP" title="Серверный язык программирования">
+               </div>
+               <div class="tech-item vue">
+                  <img class="tech-image" src="img/tech/Vue.js-black.svg" alt="VueJs" title="Js-фреймворк для создания пользовательский интерфейсов">
+               </div>
+               <div class="tech-item wp">
+                  <img class="tech-image" src="img/tech/Wordpress-black.svg" alt="WordPress" title="Популярная CMS для создания блогов">
+               </div>
+            </div>
+         </section> 
+         <section class="section-tarif">
+            <div class="tarif">
+                <div class="tarif-item tarif-title">
+                  <p>Тарифы</p>
+               </div>
+               <div class="tarif-item tarif-description">
+                  <p>Представленные ниже цены зависят не только от того какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ</p>
+               </div>
+               <div class="tarif-item">
+                  <p class="tarif-name">Разработка лэндинга или сайт визитки</p>
+                  <p class="tarif-text">Небольшойсайт состоящий из одной страницы</p>
+                  <p class="project"><span>Обсудить проект</span><span class="project-img"></span></p>
+               </div>
+               <div class="tarif-item">
+                  <p class="tarif-pack">Что входит</p>
+                  <ul class="tarif-list">
+                     <li class="tarif-list-item">Сайт на CMS WordPress</li>
+                     <li class="tarif-list-item">Одна посадачная страница</li>
+                     <li class="tarif-list-item">От 7 дней</li>
+                  </ul>
+                  <p class="tarif-price">От 7000 Р</p>
+                  
+               </div>
+            </div>
+         </section>
       </div>
       <footer>
       </footer>
@@ -348,10 +402,16 @@
    <script src="script/jquery-ui.min.js"></script>
    <script>
       $( function() {
-        $( "#tabs" ).tabs({
-           active: 0
-        });
+         $("#tabs").tabs({ active: 0});
+         $( document ).tooltip();
       } );
-   </script>
+      $( ".tech-image" ).tooltip({
+            position: {
+            my: "center top",
+            at: "center bottom-10",
+            collision: "none"
+         }
+      });
+      </script>
 </body>
 </html>
